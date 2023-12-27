@@ -340,7 +340,7 @@ span {
     margin: 2rem 0 3rem;
 }
 
-#about-content-p2{
+#about-content-p2 {
     display: none;
 }
 
@@ -857,14 +857,19 @@ span {
         bottom: 55px;
     }
 
-    #about-content-p2{
+    .education-content .content p {
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    #about-content-p2 {
         display: block;
     }
 
-    #about-content-p1{
+    #about-content-p1 {
         display: none;
     }
-    
+
     #home-prg {
         display: none;
     }
@@ -944,7 +949,7 @@ span {
         height: 100vh;
     }
 
-    .home-content{
+    .home-content {
         margin-top: 65px;
     }
 
