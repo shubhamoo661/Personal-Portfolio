@@ -251,21 +251,7 @@ section {
     width: 100%;
 }
 
-.home-imghover {
-    position: absolute;
-    top: 90px;
-    right: 121px;
-    width: 400px;
-    height: 550px;
-    background: transparent;
-    transition: 3s;
-    overflow: hidden;
-}
 
-.home-imghover:hover {
-    background: var(--bg-color);
-    opacity: .4;
-}
 
 .about {
     display: flex;
@@ -302,12 +288,13 @@ span {
 }
 
 .about-img img {
+    position: relative;
     width: 80%;
     height: 85%;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
-    object-fit: contain;
-    object-position: bottom;
+    object-fit: cover;
+    object-position: top;
 }
 
 .about-img .circle-spin {
@@ -541,7 +528,6 @@ span {
 }
 
 
-
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -581,8 +567,6 @@ span {
 #PhoneNo {
     flex: 1;
 }
-
-
 
 .input-field input::placeholder,
 .textarea-field textarea::placeholder {
@@ -997,6 +981,16 @@ span {
 
 }
 
+@media (min-width: 312px) {
+    .heading {
+        bottom: 0px;
+    }
+
+    .education-content .content {
+        width: 276px;
+    }
+}
+
 
 
 
@@ -1058,10 +1052,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-/* Demon Slayer img effect */
+/* img effect */
 #img {
     overflow: hidden;
-    width: 500px;
+    width: 375px;
     height: 600px;
     margin: 90px 0 0 100px;
     /* border: 1px solid red; */
@@ -1069,11 +1063,29 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #img img {
     position: relative;
-    bottom: 4px;
-    left: 12px;
+    bottom: 245px;
+    left: 18px;
     width: 100%;
-    height: 100%;
+    height: 175%;
     object-fit: cover;
     object-position: top;
-    scale: 1.4;
+
+    /* border: 3px solid rgb(30, 0, 255); */
+}
+
+.home-imghover {
+    position: absolute;
+    top: 120px;
+    right: 170px;
+    width: 340px;
+    height: 500px;
+    background: transparent;
+    transition: 3s;
+    overflow: hidden;
+    /* border: 1px solid green; */
+}
+
+.home-imghover:hover {
+    background: var(--bg-color);
+    opacity: .4;
 }
