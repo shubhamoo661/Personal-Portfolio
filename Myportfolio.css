@@ -981,7 +981,13 @@ span {
 
 }
 
-@media (min-width: 312px) {
+@media (max-width:312px){
+    .education-content .content{
+        width: 274px;
+    }
+}
+
+/* @media (min-width: 312px) {
     .heading {
         bottom: 0px;
     }
@@ -989,7 +995,7 @@ span {
     .education-content .content {
         width: 276px;
     }
-}
+} */
 
 
 
