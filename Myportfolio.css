@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
 
 
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
@@ -31,8 +39,16 @@ body {
 
 .header {
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: fixed;
     top: 0;
@@ -64,6 +80,8 @@ body {
     color: #ffffff;
     font-weight: 500;
     margin-left: 3.5rem;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -86,7 +104,11 @@ section {
 }
 
 .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 7%;
 }
@@ -116,11 +138,15 @@ section {
     font-weight: 900;
     color: transparent;
     -webkit-text-stroke: .1px var(--main-color);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--main-color)), to(var(--main-color)));
+    background-image: -o-linear-gradient(var(--main-color), var(--main-color));
     background-image: linear-gradient(var(--main-color), var(--main-color));
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
+    -webkit-animation: homeBgText 6s linear infinite;
     animation: homeBgText 6s linear infinite;
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
 
 }
@@ -134,7 +160,9 @@ section {
     height: 90%;
     border-right: 2px solid var(--main-color);
     z-index: -1;
+    -webkit-animation: homeCursorText 6s linear infinite;
     animation: homeCursorText 6s linear infinite;
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
 }
 
@@ -148,7 +176,11 @@ section {
 
 .btn-box {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
@@ -156,8 +188,14 @@ section {
 
 .btn-box .btn {
     position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 14.5rem;
     height: 100%;
@@ -170,6 +208,8 @@ section {
     color: var(--bg-color);
     overflow: hidden;
     z-index: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -199,6 +239,8 @@ section {
     height: 100%;
     background-color: var(--bg-color);
     z-index: -1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -210,14 +252,24 @@ section {
     position: absolute;
     bottom: 4rem;
     width: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .home-sci a {
     position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 40px;
     height: 40px;
@@ -228,6 +280,8 @@ section {
     color: var(--main-color);
     overflow: hidden;
     z-index: 1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -244,6 +298,8 @@ section {
     height: 100%;
     background: var(--main-color);
     z-index: -1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -254,9 +310,18 @@ section {
 
 
 .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 2rem;
     background-color: var(--second-bg-color);
@@ -281,8 +346,14 @@ span {
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     overflow: hidden;
 }
@@ -293,7 +364,9 @@ span {
     height: 85%;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: top;
     object-position: top;
 }
 
@@ -301,6 +374,8 @@ span {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
     transform: translate(-50%, -50%) rotate(0);
     border: 1px solid white;
     width: 100%;
@@ -310,6 +385,7 @@ span {
     border-bottom: .2rem solid transparent;
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
+    -webkit-animation: aboutSpinner 9s linear infinite;
     animation: aboutSpinner 9s linear infinite;
     overflow: hidden;
 }
@@ -332,26 +408,42 @@ span {
 }
 
 .btn-box.btns {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 15rem;
 }
 
 .education {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-height: auto;
     padding-bottom: 5rem;
 }
 
 .education .education-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 5rem;
 }
 
 .education-row .education-column {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
     flex: 1 1 40rem;
 }
 
@@ -387,6 +479,8 @@ span {
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -399,6 +493,8 @@ span {
     height: 100%;
     background-color: var(--second-bg-color);
     z-index: -1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -437,12 +533,17 @@ span {
 }
 
 .skills .skills-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 5rem;
 }
 
 .skills-row .skills-column {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
     flex: 1 1 40rem;
 }
 
@@ -465,6 +566,8 @@ span {
     width: 0;
     height: 100%;
     background-color: var(--bg-color);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     z-index: -1;
 }
@@ -479,7 +582,11 @@ span {
 
 .skills-content .progress h3 {
     font-size: 1.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -541,8 +648,13 @@ span {
 
 .contact form .input-box {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -565,7 +677,29 @@ span {
 }
 
 #PhoneNo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+}
+
+.input-field input::-webkit-input-placeholder,
+.textarea-field textarea::-webkit-input-placeholder {
+    color: var(--text-color);
+}
+
+.input-field input::-moz-placeholder,
+.textarea-field textarea::-moz-placeholder {
+    color: var(--text-color);
+}
+
+.input-field input:-ms-input-placeholder,
+.textarea-field textarea:-ms-input-placeholder {
+    color: var(--text-color);
+}
+
+.input-field input::-ms-input-placeholder,
+.textarea-field textarea::-ms-input-placeholder {
+    color: var(--text-color);
 }
 
 .input-field input::placeholder,
@@ -581,6 +715,8 @@ span {
     height: 100%;
     background: var(--second-bg-color);
     border-radius: .6rem;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     z-index: -1;
 }
@@ -595,6 +731,8 @@ span {
 .contact form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -604,9 +742,16 @@ span {
 
 
 .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--second-bg-color);
@@ -618,8 +763,14 @@ span {
 
 .footer-iconTop a {
     position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: .8rem;
     background: var(--main-color);
@@ -638,6 +789,8 @@ span {
     height: 100%;
     background: var(--second-bg-color);
     z-index: -1;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -648,6 +801,8 @@ span {
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: var(--bg-color);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -675,7 +830,9 @@ span {
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
+    -webkit-animation: showRight 1s ease forwards;
     animation: showRight 1s ease forwards;
+    -webkit-animation-delay: calc(.3s * var(--i));
     animation-delay: calc(.3s * var(--i));
 }
 
@@ -736,15 +893,22 @@ span {
         width: 100%;
         padding: 1rem 4%;
         background: var(--main-color);
+        -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         z-index: 1;
+        -webkit-transition: .25s ease;
+        -o-transition: .25s ease;
         transition: .25s ease;
+        -webkit-transition-delay: .25s;
+        -o-transition-delay: .25s;
         transition-delay: .25s;
     }
 
     /* toggle calss from javascript */
     .navbar.active {
         left: 0;
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
         transition-delay: 0s;
     }
 
@@ -757,12 +921,18 @@ span {
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         z-index: -1;
+        -webkit-transition: .25s ease;
+        -o-transition: .25s ease;
         transition: .25s ease;
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
         transition-delay: 0s;
     }
 
     .navbar.active .active-nav {
         left: 0;
+        -webkit-transition-delay: .25s;
+        -o-transition-delay: .25s;
         transition-delay: .25s;
     }
 
@@ -770,13 +940,23 @@ span {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        -webkit-transform: translateX(-20rem);
+        -ms-transform: translateX(-20rem);
         transform: translateX(-20rem);
+        -webkit-transition: .35s ease;
+        -o-transition: .35s ease;
         transition: .35s ease;
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
         transition-delay: 0s;
     }
 
     .navbar.active a {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
+        -webkit-transition: .25s;
+        -o-transition: .25s;
         transition: .25s;
     }
 
@@ -802,12 +982,19 @@ span {
     }
 
     .home-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         grid-row-gap: 14px;
         text-align: center;
         position: absolute;
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 
@@ -821,7 +1008,12 @@ span {
     }
 
     .home-content h1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -836,6 +1028,8 @@ span {
 
     .home-sci {
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 200;
         bottom: 55px;
@@ -885,6 +1079,8 @@ span {
 
     .home-sci {
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 200;
         bottom: 63px;
@@ -908,6 +1104,9 @@ span {
     }
 
     .footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
     }
 
@@ -929,6 +1128,8 @@ span {
 @media (max-width:371px) {
 
     .home {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         height: 100vh;
     }
@@ -948,6 +1149,8 @@ span {
 
     .home-sci {
         left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
         z-index: 200;
         bottom: 89px;
@@ -981,21 +1184,13 @@ span {
 
 }
 
-@media (max-width:312px){
-    .education-content .content{
+@media (max-width:312px) {
+    .education-content .content {
         width: 274px;
     }
 }
 
-/* @media (min-width: 312px) {
-    .heading {
-        bottom: 0px;
-    }
 
-    .education-content .content {
-        width: 276px;
-    }
-} */
 
 
 
@@ -1008,6 +1203,20 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 /* Keyframe animation on class home h2 element  */
+@-webkit-keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
 @keyframes homeBgText {
 
     0%,
@@ -1019,6 +1228,27 @@ input[type="number"]::-webkit-outer-spin-button {
     65%,
     85% {
         background-position: 0 0;
+    }
+}
+
+@-webkit-keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
     }
 }
 
@@ -1043,14 +1273,28 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 }
 
+@-webkit-keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
 @keyframes showRight {
     100% {
         width: 0;
     }
 }
 
+@-webkit-keyframes aboutSpinner {
+    100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 @keyframes aboutSpinner {
     100% {
+        -webkit-transform: translate(-50%, -50%) rotate(360deg);
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
@@ -1073,7 +1317,9 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 18px;
     width: 100%;
     height: 175%;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: top;
     object-position: top;
 
     /* border: 3px solid rgb(30, 0, 255); */
@@ -1086,6 +1332,8 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 340px;
     height: 500px;
     background: transparent;
+    -webkit-transition: 3s;
+    -o-transition: 3s;
     transition: 3s;
     overflow: hidden;
     /* border: 1px solid green; */
